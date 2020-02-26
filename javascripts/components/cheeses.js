@@ -14,6 +14,7 @@ const selectedCheese = (e) => {
 }
 
 const cheeseBuilder = () => {
+    const allSelectedCheeses = []
     const cheesings = cheeses.getCheese();
     let domString = ''
     cheesings.forEach((cheese) => {

@@ -21,13 +21,16 @@ const cheeses = [
 
 let selectedCheeseId = ''
 
+const arrOfSelectedCheeses = [];
+
 const setSelectedCheese = (cheeseId) =>{
-    selectedCheeseId = cheeseId;
-    console.log('selectedCheeseId', selectedCheeseId)
+    selectedCheeseId = cheeses.find((x) => x.id === cheeseId)
+    arrOfSelectedCheeses.push(selectedCheeseId)
+    console.log(arrOfSelectedCheeses)
 }
 
 const getCheese = () => {
     return cheeses;
 }
 
-export default { getCheese, setSelectedCheese }
+export default { getCheese, setSelectedCheese, arrOfSelectedCheeses }

@@ -19,15 +19,17 @@ const breads = [
     }
 ]
 
-let selectedBreadId = ''
+const breadArray = [];
 
 const setSelectedBread = (breadId) =>{
     selectedBreadId = breadId;
-    console.log('selectedBreadId', selectedBreadId)
+    const breadSelection = breads.find((x) => x.id === breadId)
+    breadArray.push(breadSelection)
+    console.log(breadArray)
 }
 
 const getBread = () => {
     return breads;
 }
 
-export default { getBread, setSelectedBread }
+export default { getBread, setSelectedBread, breadArray }
